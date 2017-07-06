@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chattons - Customizable Chat Buttons</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>Welcome to Chattons</h1>
+	<p>
+		This addon to twitch is supposed to help with sending customizable texts to a twitch chat of your liking. Like "!bet 400" if you want to bet 400 of the chat currency on anything.
+	</p>
+	<div class="menu">
+		<button id="openSettings">Settings</button>
+		<button id="resetButtons">Delete all buttons</button>
+		<button class="connect" id="connect">Connect</button>
+	</div>
+	<div id="buttons" class="buttons">
+		<button id="startAddButton" class="chattonsButton addButton">Add Button</button>
+	</div>
+	<div id="overlay" class="overlay">
+	</div>
+	<div class="overlay helper">
+		<!--<div id="helper" class="helper">-->
+			<div id="buttonForm" class="overlay-page buttonForm">
+				<label for="buttonName" class="inputLabel">Label</label><input type="text" id="buttonName"><br/>
+				<label for="buttonContent" class="inputLabel">Message</label><input type="text" id="buttonContent">
+				<button id="addButton">Add Button</button>
+			</div>
+			<div id="settings" class="overlay-page settings">
+				<p>
+					Your settings will be saved to the local storage of your browser, so if you already connected once with this device and browser just hit connect!
+				</p>
+				<label for="username" class="inputLabel">Username</label><input type="text" id="username"><br/>
+				<label for="channel" class="inputLabel">Channel</label><input type="text" id="channel"><br/>
+				<label for="oauth" class="inputLabel">OAuth</label><input type="password" id="oauth" onpaste=""><br/>
+				<a href="https://twitchapps.com/tmi/" target="_blank">To get your OAuth-Token use twitchapps.com/tmi.</a><br/>
+				<button id="connectOverlay" class="connect">Connect</button>
+			</div>
+		<!--</div>-->
+	</div>
+	<script src="chattons.js"></script>
+</body>
+</html>
